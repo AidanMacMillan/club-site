@@ -1,0 +1,40 @@
+.navbar {
+	display: flex;
+	background-color: var(--foreground);
+	align-items: center;
+	height: 56px;
+}
+
+.container {
+	width: 100%;
+	max-width: var(--page-width);
+
+	margin: 0 auto;
+}
+
+.logo {
+	
+}
+
+.navlinks {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0;
+}
+
+.navlink {
+	display: block;
+	float: left;
+
+	margin: 10px;
+	list-style: none;
+}
+
+.navlink a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
