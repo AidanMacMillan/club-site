@@ -1,5 +1,5 @@
-import Navbar from '../common/Navbar'
-import '../public/main.css'
+import Navbar from '../components/Navbar'
+import '../../public/main.css'
 
 export default function App({ Component, pageProps }) {
 	return <>

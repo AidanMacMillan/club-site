@@ -5,24 +5,19 @@
 	height: 56px;
 }
 
-.container {
-	width: 100%;
-	max-width: var(--page-width);
-
-	margin: 0 auto;
-}
-
 .logo {
 	
 }
 
 .navlinks {
 	position: absolute;
-	top: 0;
+	top: 50%;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, -50%);
 	margin: 0;
 	padding: 0;
+	
+	font-size: 14px;
 }
 
 .navlink {

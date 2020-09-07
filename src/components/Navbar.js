@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
 	return <nav className={styles.navbar}>
-		<div className={styles.container}>
+		<div className="container">
 			<div className={styles.logo}>
 				<Link href="/">
 					<a>C Web Dev</a>
