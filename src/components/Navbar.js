@@ -6,7 +6,7 @@ export default function Navbar() {
 		<div className="container">
 			<div className={styles.logo}>
 				<Link href="/">
-					<a>C Web Dev</a>
+					<a>C WEB DEV</a>
 				</Link>
 			</div>
 			<ul className={styles.navlinks}>

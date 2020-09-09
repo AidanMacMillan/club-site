@@ -1,6 +1,7 @@
-.container {
+.layout {
 	position: relative;
 	width: 100%;
+	padding: 40px 10px;
 	max-width: var(--page-width);
 
 	margin: 0 auto;

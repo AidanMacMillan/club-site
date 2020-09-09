@@ -5,8 +5,10 @@
 	height: 56px;
 }
 
-.logo {
-	
+.logo a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 .navlinks {
@@ -16,13 +18,12 @@
 	transform: translate(-50%, -50%);
 	margin: 0;
 	padding: 0;
-	
+	white-space: nowrap;
 	font-size: 14px;
 }
 
 .navlink {
-	display: block;
-	float: left;
+	display: inline-block;
 
 	margin: 10px;
 	list-style: none;

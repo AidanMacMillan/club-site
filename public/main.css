@@ -2,7 +2,7 @@
 	--background: #14161A;
 	--foreground: #191C20;
 	--text: #fff;
-	--page-width: 800px;
+	--page-width: 1000px;
 }
 
 body {
@@ -18,7 +18,9 @@ body {
 }
 
 .container {
+	display: flex;
 	position: relative;
+	padding: 10px;
 	width: 100%;
 	max-width: var(--page-width);
 

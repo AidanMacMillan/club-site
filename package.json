@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run mongo-up && next dev",
+    "mongo-up": "cd mongo && docker-compose up -d",
+    "mongo-down": "cd mongo && docker-compose down",
     "build": "next build",
     "start": "next start"
   },
@@ -20,8 +22,15 @@
   },
   "homepage": "https://github.com/AidanMacMillan/club-site#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "esm": "^3.2.25",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.3",
+    "mongoose-type-email": "^1.0.12",
     "next": "^9.5.3",
+    "next-connect": "^0.9.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "swr": "^0.3.2"
   }
 }
