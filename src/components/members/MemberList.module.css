@@ -1,14 +1,54 @@
 .memberList {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
-    column-gap: 40px;
-    row-gap: 40px;
+    column-gap: var(--grid-gap);
+    row-gap: var(--grid-gap);
     justify-content: center;
 }
 
 .memberItem {
+    display: flex;
     width: 100%;
-    height: 100px;
-    padding: 20px;
+    height: 120px;
+    padding: 15px;
     background-color: var(--foreground);
+
+    text-decoration: none;
+    color: var(--text);
+
+    transition: 0.2s;
+}
+
+.memberItem:hover {
+    background-color: var(--foreground-highlight);
+}
+
+.profile {
+    width: 90px;
+    height: 90px;
+    background-color: black;
+    border-radius: 100%;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+.memberInfo {
+    position: relative;
+    flex-grow: 1;
+}
+
+.name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.firstName {
+    font-weight: bold;
+}
+
+.lastName {
+    font-weight: normal;
 }

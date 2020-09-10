@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
 :root {
 	--background: #14161A;
 	--foreground: #191C20;
+	--foreground-highlight: #1C1F23;
+	--primary: #272A2E;
+	--secondary: #0C0E10;
+	--accent: #0BD6F6;
+	--profile: #76CAE5;
 	--text: #fff;
 	--page-width: 1000px;
+	--grid-gap: 40px;
 }
 
 body {
@@ -10,19 +18,9 @@ body {
 
 	background-color: var(--background);
 	color: var(--text);
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 * {
 	box-sizing: border-box;
-}
-
-.container {
-	display: flex;
-	position: relative;
-	padding: 10px;
-	width: 100%;
-	max-width: var(--page-width);
-
-	margin: 0 auto;
 }

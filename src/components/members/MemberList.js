@@ -1,13 +1,8 @@
+import Link from 'next/link'
+import Profile from './Profile'
 import styles from './MemberList.module.css'
 import useSWR from 'swr'
-
-const fetcher = async (url) =>  {
-	const res = await fetch(url)
-	if(!res.ok) {
-		throw Error("Bad Request")
-	}
-	return await res.json()
-}
+import fetcher from '../../utils/fetcher'
 
 export default function MemberList() {
 	const { data, error } = useSWR('/api/users', fetcher)
@@ -22,12 +17,26 @@ export default function MemberList() {
 
 function getMemberItems(users) { 
 	return users.map((user) => {
-		return <MemberItem key={user.username} firstName={user.firstName} lastName={user.lastName}></MemberItem>
+		return <MemberItem key={user.username} firstName={user.firstName} lastName={user.lastName} username={user.username}></MemberItem>
 	})
 }
 
-function MemberItem({ ...props }) {
-    return <div className={styles.memberItem}>
-        {props.firstName} {props.lastName}
-    </div>
+function MemberItem({ ...user }) {
+    return <Link href="/members/[member]" as={"members/" + user.username}>
+		<a className={styles.memberItem}>
+			<div className={styles.profile}>
+				<Profile user={user}></Profile>
+			</div>
+			<div className={styles.memberInfo}>
+				<div className={styles.name}>
+					<span className={styles.firstName}>
+						{user.firstName + " "}
+					</span>
+					<span className={styles.lastName}>
+						{user.lastName}
+					</span>
+				</div>
+			</div>
+		</a>
+	</Link>
 }

@@ -1,9 +1,7 @@
 import Head from 'next/head'
+import Layout from '../components/Layout'
 
 export default function Home() {
-	return <>
-		<Head>
-			<title>Carleton Web Dev Club</title>
-		</Head>
-	</>
+	return <Layout title="Carleton Web Dev Club">
+	</Layout>
 }

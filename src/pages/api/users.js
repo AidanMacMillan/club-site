@@ -3,7 +3,6 @@ import nc from 'next-connect'
 import database from '../../middlewares/database'
 
 const route = nc()
-
 route.use(database())
 
 //Get Users
@@ -32,7 +31,5 @@ route.post(async (req, res) => {
         res.status(400).send("Bad Request")
     }
 })
-
-
 
 export default route

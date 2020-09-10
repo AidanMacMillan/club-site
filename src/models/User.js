@@ -92,4 +92,7 @@ UserSchema.methods.toAuthJSON = function() {
     }
 }
 
+
+//Badge 
+
 export default mongoose.models.User || mongoose.model('User', UserSchema);

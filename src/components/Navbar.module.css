@@ -11,6 +11,10 @@
 	font-weight: bold;
 }
 
+.logo img {
+	display: block;
+}
+
 .navlinks {
 	position: absolute;
 	top: 50%;
@@ -20,6 +24,7 @@
 	padding: 0;
 	white-space: nowrap;
 	font-size: 14px;
+	font-weight: bold;
 }
 
 .navlink {
@@ -33,4 +38,19 @@
 	color: white;
 	text-decoration: none;
 	text-transform: uppercase;
+	transition: 0.2s;
+}
+
+.navlink:hover a {
+	color: var(--accent);
+}
+
+.container {
+	display: flex;
+	position: relative;
+	width: 100%;
+	padding: 0 10px;
+	max-width: var(--page-width);
+
+	margin: 0 auto;
 }
